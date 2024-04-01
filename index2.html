@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style2.css" />
+    <title>Document</title>
+  </head>
+
+  <body class="grid-copontainer">
+    <header class="header">
+      <h1>Cronometro 2</h1>
+    </header>
+    <nav class="nav">
+      <a href="./index.html">Cronometro 2</a>
+    </nav>
+
+    <main class="main">
+      <div class="cronos">
+        <div class="crono_a">
+          <h2>Cronometro 1</h2>
+          <label for="">Ingrese el Tiempo en segundos: </label>
+          <input id="time_1" type="number" placeholder="Ingrese el tiempo" />
+          <p>
+            Tiempo ingresado <span id="tiempoIngresadoUno">000</span> Segundos
+          </p>
+        </div>
+        <div class="crono_b">
+          <h2>Cronometro 2</h2>
+          <label for="">Ingrese el Tiempo en segundos: </label>
+          <input id="time_2" type="number" placeholder="Ingrese el tiempo" />
+          <p>
+            Tiempo ingresado <span id="tiempoIngresadoDos">000</span> Segundos
+          </p>
+        </div>
+
+        <div class="crono_1">
+          <p id="segundos_1">00</p>
+        </div>
+
+        <div class="crono_2">
+          <p id="segundos_2">00</p>
+        </div>
+        <div>
+          <p id="Texto-crono-uno">Pause</p>
+        </div>
+        <div>
+          <p id="Texto-crono-dos">Pause</p>
+        </div>
+
+        <div class="crono_c">
+          <h2>Cronometro 3</h2>
+          <label for="">Ingrese el Tiempo en segundos: </label>
+          <input id="time_3" type="number" placeholder="Ingrese el tiempo" />
+          <p>
+            Tiempo ingresado <span id="tiempoIngresadoTres">000</span> Segundos
+          </p>
+        </div>
+        <div>
+          <button
+            type="button"
+            id="iniciar"
+            onclick="iniciarCronometroUno(), iniciarCronometroDos(), iniciarCronometroTres()"
+          >
+            Iniciar
+          </button>
+        </div>
+
+        <div class="crono_3">
+          <p id="segundos_3">00</p>
+        </div>
+        <div>
+          <p id="Texto-crono-invisible"></p>
+        </div>
+        <div>
+          <p id="Texto-crono-tres">Pause</p>
+        </div>
+      </div>
+      <div>
+        <button type="reset" onclick="reset()">Reset</button>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <h2>Descripción</h2>
+      <p>
+        El usuario pone los tiempos en cada cronometro y da en el boton
+        "iniciar". Los cronometros 1, 2 y 3 inician a la vez y van terminando a
+        medida que la cuenta llega a 0. Lo demas cronometros siguen la cuenta,
+        sin importar si alguno se para.
+      </p>
+    </aside>
+
+    <footer class="footer">
+      <div>
+        <ul>
+          <li>Daniel Builes</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>danielbuilesgomez@gmail.com</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>Martes 6:15pm</li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./js/cronos.js"></script>
+  </body>
+</html>

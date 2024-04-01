@@ -1,0 +1,216 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+ 
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+    min-height: 100%;
+    
+}
+
+.grid-copontainer > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0,75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.header{
+    grid-area: header;
+    background-color: rgb(52, 152, 219) ;
+}
+
+.nav{
+    display: flex;
+    grid-area: navbar;
+    background-color: rgb(26, 188, 156) ;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    grid-area: main;
+    background-color: rgb(52, 152, 219 );
+    height: 100%;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(26, 188, 156) ;
+    height: auto;
+}
+
+#quejeso{
+    text-align: justify;
+    margin: 0.5rem;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: rgb(46, 204, 113 );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+    
+
+ul{
+    list-style: none;
+}
+
+fieldset{
+    display: grid;
+    grid-template-columns: 10px, 3 ;
+    margin: 1.5rem;
+}
+
+
+.grid-copontainer{
+    display: grid;
+    gap: 10px;
+    grid-template: 
+    "header" 100px
+    "navbar" 50px
+    "main" auto
+    "sidebar" 100px
+    "footer" 100px; 
+}
+
+.crono_1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgb(46, 204, 113 );
+    color: cyan;
+    border-radius: 50%;
+    font-size: 1.7rem;
+}
+
+.crono_2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgb(46, 204, 113 );
+    color: rgb(11, 12, 11);
+    border-radius: 50%;
+    font-size: 1.7rem;
+}
+
+.cronos{
+    display: grid;
+    justify-content: center;
+    margin: 1.5rem;    
+    gap: 5px;
+    grid-template: 
+    "crono_a crono_a"
+    "crono_b crono_b"
+    "crono_1 crono_1"    
+    "crono_2 crono_2"
+    ;
+
+}
+button {
+    margin-top: 8px;
+    background-color: rgb(26, 188, 156);
+    cursor:pointer;
+    border: none;
+    padding: 16px 32px;    
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    color: #fff;   
+}
+button:hover{
+    background-color: rgb(70, 224, 224);
+    cursor: pointer;
+    border: solid black;
+}
+input{
+    margin-top: 8px;
+    background-color: rgb(26, 188, 156);
+    cursor:pointer;
+    border: none;
+    padding: 16px 32px;    
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 0.937);   
+}
+
+@media (min-width: 600px){
+    .grid-copontainer{
+        grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px auto 100px;
+        justify-content: center;
+        grid-template-areas: 
+        "header  header"
+        "navbar  navbar"
+        "sidebar main"        
+        "footer  footer";
+    }
+    .footer{
+        grid-area: footer;
+        background-color: rgb(46, 204, 113 );
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .cronos{
+        margin: 5px;
+        display: grid;
+        justify-content: center;
+        align-items: center;    
+        gap: 5px;
+        box-sizing: border-box;
+        grid-template: 
+        "corno_1 crono_1" 
+        "crono_2 crono_2";
+    }
+    #quejeso{
+    text-align: justify;
+    margin: 0.5rem;
+}
+
+}
+
+@media (min-width: 900px){
+    .grid-copontainer{
+        justify-content: center;
+        grid-template: 
+        "header  header header" 100px
+        "navbar main  sidebar" auto
+        "footer footer footer" 100px /
+        200px auto 200px     
+        ;
+    }
+    #quejeso{
+        text-align: justify;
+        margin: 0.5rem;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: rgb(46, 204, 113 );
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-around;
+        flex-direction: row;
+    }
+}
+   
+

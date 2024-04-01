@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Cronometro 1</title>
+  </head>
+  <body class="grid-copontainer">
+    <header class="header">
+      <h1>Cronometro 1</h1>
+    </header>
+    <nav class="nav">
+      <a href="./index2.html">Cronometro 2</a>
+    </nav>
+
+    <main class="main">
+      <div>
+        <fieldset>
+          <legend>
+            <label for="">Ingrese el Tiempo en segundos: </label>
+          </legend>
+          <input id="time" type="number" placeholder="Ingrese el tiempo" />
+        </fieldset>
+      </div>
+      <div>
+        <p>Tiempo ingresado <span id="tiempoIngresado">000</span> segundos</p>
+      </div>
+      <div>
+        <button type="button" id=" " onclick="iniciarCronometro()">
+          Iniciar
+        </button>
+      </div>
+      <div class="cronos">
+        <div class="crono_a">
+          <h2>Cronometro 1</h2>
+        </div>
+
+        <div class="crono_b">
+          <h2>Cronometro 2</h2>
+        </div>
+
+        <div class="crono_1">
+          <p id="segundos">00</p>
+        </div>
+
+        <div class="crono_2">
+          <p id="segundos2">00</p>
+        </div>
+        <p id="Texto-crono-uno">Pause</p>
+        <p id="Texto-crono-dos">Pause</p>
+      </div>
+      <div>
+        <button type="button" onclick="reset()">Reset</button>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <h2>Descripción</h2>
+      <p id="quejeso">
+        El usuario pone el tiempo y da en el boton "iniciar". El cronometro 1
+        llegará hasta el tiempo ingresado por el usuario y se para. El
+        cronometro 2 iniciara la cuenta una vez se haya parado el cronometro 1.
+      </p>
+    </aside>
+    <footer class="footer">
+      <div>
+        <ul>
+          <li>Daniel Builes</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>danielbuilesgomez@gmail.com</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>Martes 6:15pm</li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./js/crono.js"></script>
+  </body>
+</html>
